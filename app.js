@@ -3,8 +3,8 @@ const Tx = require('ethereumjs-tx')
 const Web3 = require('web3')
 const web3 = new Web3('https://ropsten.infura.io/CTNrMRz6lyyxOxddWG7y')
 
-const acct1 = '0x4526762d9FD955b56A85480239e7102c1484C222'
-const acct2 = '0x9870d54f9606e9103F91fcE6241033923fb2fCEd'
+const acct1 = '0xff4b093efFAbAEAE2aE72E3F048A75e3456cD5C4'
+const acct2 = '0x37f2A6E2b3F04c392c3cDF65B8CEEA3942f9F31d'
 
 // To not reveal private keys export them to environment variables.
 // Example: $ export PRIVATE_KEY_1 ='Private Key'
@@ -33,7 +33,7 @@ web3.eth.getTransactionCount(acct1, (err, txCount) => {
     // Broadcast a transaction
     web3.eth.sendSignedTransaction(raw, (err, txHash) => {
         console.log('Transaction Hash: ', txHash)
-    }) 
+    })
 })
 
-// console.log(web3.eth.accounts.create())
+console.log(web3.eth.accounts.create())
